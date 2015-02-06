@@ -20,12 +20,9 @@ allres<-allres[-which(grepl("OPSTILLINGSKREDS",as.character(allres$unit))),]
 #standardize names
 allres$unit<-tolower(allres$unit)
 
-allres$unit<-gsub("ã¸","oe",allres$unit)
-allres$unit<-gsub("ã¦","ae",allres$unit)
-allres$unit<-gsub("ã\u0098","oe",allres$unit)
-allres$unit<-gsub("ã¥","aa",allres$unit)
-allres$unit<-gsub("ã","aa",allres$unit)
-allres$unit<-gsub("ã¼","u",allres$unit)
+allres$unit<-gsub("æ","ae",allres$unit)
+allres$unit<-gsub("ø","oe",allres$unit)
+allres$unit<-gsub("å","aa",allres$unit)
 
 #ex.: reddest voting places in DK?
 allres$redshare<-(allres$sd+allres$sf+allres$el)/allres$allvotes
