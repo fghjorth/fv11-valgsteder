@@ -20,3 +20,5 @@ head(allres[order(allres$redshare),])
 require(ggplot2)
 ggplot(allres,aes(x=redshare)) +
   geom_histogram()
+
+write.csv(allres,file="allres.csv")
